@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex/consts/consts_app.dart';
 
+import 'widgets/app_bar_home.dart';
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -30,34 +32,18 @@ class HomePage extends StatelessWidget {
                 Container(
                   height: statusWidth,
                 ),
-                Container(
-                  child: Column(
-                    children: <Widget> [
-                      Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: <Widget> [
-                            Padding(
-                              padding: EdgeInsets.only(top: 10),
-                              child: IconButton(
-                                onPressed: () {}, 
-                                icon: Icon(Icons.menu)
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text('Pokedex'),
-                        ],
-                      ),
-                    ],
+                AppBarHome(),
+                Expanded(
+                  child: Container(
+                    child: ListView(
+                      children: const <Widget> [
+                        ListTile(
+                          title: Text('Pokemon 1'),
+                        )
+                      ],
+                    ),
                   ),
-                  height: 150,
-                  //color: (Color.fromARGB(200, 255, 255, 210)),
-                )
+                ),
               ],
             )
           ),
