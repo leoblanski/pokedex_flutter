@@ -39,7 +39,40 @@ class HomePage extends StatelessWidget {
                       children: const <Widget> [
                         ListTile(
                           title: Text('Pokemon 1'),
-                        )
+                        ),
+                        ListTile(
+                          title: Text('Pokemon 1'),
+                        ),
+                        ListTile(
+                          title: Text('Pokemon 1'),
+                        ),
+                        ListTile(
+                          title: Text('Pokemon 1'),
+                        ),
+                        ListTile(
+                          title: Text('Pokemon 1'),
+                        ),
+                        ListTile(
+                          title: Text('Pokemon 1'),
+                        ),
+                        ListTile(
+                          title: Text('Pokemon 1'),
+                        ),
+                        ListTile(
+                          title: Text('Pokemon 1'),
+                        ),
+                        ListTile(
+                          title: Text('Pokemon 1'),
+                        ),
+                        ListTile(
+                          title: Text('Pokemon 1'),
+                        ),
+                        ListTile(
+                          title: Text('Pokemon 1'),
+                        ),
+                        ListTile(
+                          title: Text('Pokemon 1'),
+                        ),
                       ],
                     ),
                   ),
