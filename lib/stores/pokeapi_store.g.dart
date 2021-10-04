@@ -9,7 +9,7 @@ part of 'pokeapi_store.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
 mixin _$PokeApiStore on _PokeApiStoreBase, Store {
-  Computed<PokeAPI>? _$pokeAPIComputed;
+  Computed<PokeAPI> _$pokeAPIComputed;
 
   @override
   PokeAPI get pokeAPI =>
@@ -41,6 +41,28 @@ mixin _$PokeApiStore on _PokeApiStoreBase, Store {
         name: '_PokeApiStoreBase.fetchPokemonList');
     try {
       return super.fetchPokemonList();
+    } finally {
+      _$_PokeApiStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  dynamic getPokemon({int index}) {
+    final _$actionInfo = _$_PokeApiStoreBaseActionController.startAction(
+        name: '_PokeApiStoreBase.getPokemon');
+    try {
+      return super.getPokemon(index: index);
+    } finally {
+      _$_PokeApiStoreBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  Widget getImage({String numero}) {
+    final _$actionInfo = _$_PokeApiStoreBaseActionController.startAction(
+        name: '_PokeApiStoreBase.getImage');
+    try {
+      return super.getImage(numero: numero);
     } finally {
       _$_PokeApiStoreBaseActionController.endAction(_$actionInfo);
     }

@@ -1,7 +1,7 @@
 class PokeAPI {
   List<Pokemon> pokemon;
 
-  PokeAPI({required this.pokemon});
+  PokeAPI({this.pokemon});
 
   PokeAPI.fromJson(Map<String, dynamic> json) {
     if (json['pokemon'] != null) {
@@ -35,17 +35,17 @@ class Pokemon {
   List<PrevEvolution> prevEvolution;
 
   Pokemon(
-      {required this.id,
-      required this.num,
-      required this.name,
-      required this.img,
-      required this.type,
-      required this.height,
-      required this.weight,
-      required this.candy,
-      required this.egg,
-      required this.nextEvolution,
-      required this.prevEvolution});
+      {this.id,
+       this.num,
+       this.name,
+       this.img,
+       this.type,
+       this.height,
+       this.weight,
+       this.candy,
+       this.egg,
+       this.nextEvolution,
+       this.prevEvolution});
 
   Pokemon.fromJson(Map<String, dynamic> json) {
     id = json['id'];
